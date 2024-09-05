@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/d36eeea605.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="contact">
+        <nav>
+            <ul>
+               <li><a href="https://www.facebook.com/rentme.431541"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+               <li><a href="https://www.instagram.com/rentme.out/"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+               <li><a href="https://www.linkedin.com/company/rentme/"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+               <li><a href="https://www.youtube.com/@onrentme"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+               <li><a href="https://x.com/rentme_app"><i class="fa-brands fa-square-x-twitter"></i><span>Twitter</span></a></li>
+            </ul>
+         </nav>
+        <div class="content">
+            <h2><b>Contact Us</b></h2>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-globe" style="color: blue;"></i></div>
+                    <div class="text">
+                        <h3><a href="index.html" style="color: #00bcd4;">Website</a></h3>
+                        <p>RentMe.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone" style="color: blue;"></i></div>
+                    <div class="text">
+                        <h3><a href="tel:+91 8054969067" style="color: #00bcd4;">Phone</a></h3>
+                        <p>+91 8054969067</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope" style="color: blueviolet;"></i></div>
+                    <div class="text">
+                        <h3><a href="mailto:RentMe@gmail.com" style="color: #00bcd4;">Email</a></h3>
+                        <p>RentMe@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <h2><b>Send Message</b></h2><br>
+                    <div class="inputBox">
+                        <input type="text" name="fullName" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required"></textarea>
+                        <span>Type Your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <h3>Rate Us:</h3>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                        </div>
+                    </div>
+                    <p id="ratingError" style="color:red; display:none;">Please select a star rating before submitting!</p>
+                    <div class="inputBox">
+                        <center><input type="submit" value="Send"></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            const ratings = document.getElementsByName('rating');
+            let ratingSelected = false;
+
+            for (let i = 0; i < ratings.length; i++) {
+                if (ratings[i].checked) {
+                    ratingSelected = true;
+                    break;
+                }
+            }
+            if (!ratingSelected) {
+                document.getElementById('ratingError').style.display = 'block';
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

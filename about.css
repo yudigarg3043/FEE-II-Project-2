@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  background-image: url(https://www.bsocial.ca/wp-content/uploads/2020/07/about-us-page-title-background.jpg);
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 30px;
+}
+h1, h2, h3 {
+  font-weight: bold;
+  color: #333;
+}
+h3 {
+  font-size: 1.5em;
+  margin-left: 200px;
+  color: #2c2c2c;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+p {
+  margin-bottom: 15px;
+  margin-top: -5px;
+}
+ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+li {
+  margin-bottom: 5px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.social-icon {
+  margin: 0 10px;
+  font-size: 28px;
+}
+.social-icon:hover {
+  color: #007bff;
+}
