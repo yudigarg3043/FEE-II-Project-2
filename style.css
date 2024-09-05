@@ -65,7 +65,7 @@ a{
     /* margin-right: 10px; */
 }
 
-input[type="text"] {
+input[type="number"] {
     border: none;
     flex-grow: 1;
     /* padding: 10px; */
